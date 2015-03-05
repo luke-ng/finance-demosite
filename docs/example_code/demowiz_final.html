@@ -1,0 +1,45 @@
+{% load url from future %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>eMagz Online Publications</title>
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}demosp.ebook/images/favicon.png"/>
+    <meta name="keywords" content="eMagz, MASS demo" />
+    <meta name="description" content="eMagz is a demo website to showcase MASS authentication." />
+
+    <link href="{{ STATIC_URL }}demosp.ebook/css/templatemo_style.css" type="text/css" rel="stylesheet" /> 
+    <!--<script type="text/javascript" src="{{ STATIC_URL }}demosp.ebook/js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head> 
+
+<body> 
+    
+    <div id="templatemo_header" style="padding-top:30px">
+        <div id="site_title"><h1><a href="{% url 'ebook_home' %}" title="eMagz Demo">eMagz</a></h1></div>
+    </div>
+
+    <div id="templatemo_main_noheight">   
+        <a href="{% url 'ebook_home' %}" >Skip setup and go direct to login page</a>
+        <h3>This wizard will bring you through the setup process to run the demo successfully.</h3>
+        <p class="center"><img src="{{ STATIC_URL }}demosp.ebook/images/wiz_step3.png" alt="Step 3" />            
+        </p>    
+        <h2 class="center"><u>Protect Your Account With MASS-2FA</u></h2>
+        
+        <div class="center">
+            <h3>Open the MASS app on your device, go to "Protect My Account" and scan the registration QR code</h3>
+            <a id="reg_anchor" href="{{ regis_url }}" target="_blank" class="header" style="font-size: x-large;">Get Registration Code</a>           
+        </div>
+    </div>
+    </br></br></br>
+    <div class="center">
+        <input class="button" type="button" value="Finish" onclick="window.location='{% url 'ebook_home' %}'" style="font-size: x-large;"/>
+    </div>
+    </br>
+    <div id="templatemo_footer">
+        Copyright © 2013 <a href="http://www.mass2fa.com" target="_blank">mass2fa.com</a> | Designed by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
+    </div>
+
+</body> 
+</html>
