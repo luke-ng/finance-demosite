@@ -1,0 +1,52 @@
+body {
+	
+}
+
+
+/* Custom page header */
+.header {
+	background: #5CBB1E;
+	margin-bottom: 20px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  padding: 12px 6px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* Custom page footer */
+footer {
+  color: white;
+  background: #5CBB1E;
+  padding: 16px 20px 5px 20px;
+  margin-top: 20px;
+  /*border-top: 1px solid #e5e5e5;*/
+}
+
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.with-background {
+  background: url("../img/ifinance-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rounded-well {
+  border-radius: 32px;
+  background-color: #EAF2EB;
+  padding: 19px;
+  margin-bottom: 20px;
+}
+
+.login-logo {
+  width: 50px;
+}
