@@ -9,10 +9,10 @@
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.png">
 
-    <title>Theme Template for Bootstrap</title>
+    <title>Cylock Demo - Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
     <link href="css/custom-theme.css" rel="stylesheet">
@@ -24,18 +24,18 @@
     <![endif]-->
   </head>
 
-  <body role="document" class="with-background">
+  <body role="document"><div id="wrapper" class="with-background">
     <div class="header">
       <h3><strong>18 Degrees Lab Cylock Demo</strong></h3>
     </div>
-    <br><br>
+    <br>
     <div class="container" role="main">
       <div class="row">
         <!-- Left half of page-->
         <div class="col-sm-6">
           <h3 class="text-center">
             <img class="login-logo" src="img/dollar148.png" />
-            Welcome to i-Financial
+            &nbsp;Welcome to i-Financial
           </h3>
           <div class="rounded-well">
             <form class="form-horizontal">
@@ -52,20 +52,20 @@
                   <input type="password" class="form-control" id="login_pw" name="login_pw" autocomplete="off">
                 </div>
               </div>
-
+              <br>
               <div class="form-group text-center">
-                <button type="submit" class="btn btn-lg btn-success">Login</button>
+                <button type="submit" class="btn btn-block btn-lg btn-success"><strong>Login</strong></button>
               </div>
             </form>
-            <div class="clearfix"></div>
+            <p class="text-right"><a href="#"><small>Do not have an account?</small></a></p>
           </div><!-- End login well -->
         </div>
 
         <!-- Right half of page-->
         <div class="col-sm-6">
-          <div class="row">
+          <div class="row" style="padding-top: 64px">
             <div class="col-sm-6 text-center">
-              <br><br><br><br>
+              <br><br><br>
               <p class="h1"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></p>
               <p class="h5">Login to authenticate on your device</p>
             </div>
@@ -73,15 +73,23 @@
               <img src="img/2fa-phone.png" style="height:300px"/>
             </div>
           </div>
-        <div>
+        </div>
 
       </div>
     </div>
 
+    <br>
+    <p class="h3 text-center">Here at i-Financial, security is top priority. Your login is secured by Cylock Out-of-Band authentication.
+      <br><br>Rest assured your account will not fall prey to password leaks and hacks.</p>
+
+    <br><br><br><br>
+    <div id="footer">
+      <p class="text-right">&copy; 2015 18 Degrees Labs. All rights reserved.</p>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  </body>
+  </div></body>
 </html>

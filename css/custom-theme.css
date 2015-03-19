@@ -1,13 +1,24 @@
+html,
 body {
-	
+  height: 100%;	
 }
 
+.btn{
+  white-space:normal !important;
+  word-wrap:break-word; 
+}
+
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
 
 /* Custom page header */
 .header {
 	background: #5CBB1E;
 	margin-bottom: 20px;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   padding: 12px 6px;
@@ -16,16 +27,19 @@ body {
   line-height: 40px;
   text-align: center;
   color: white;
-  font-family: Tahoma, Geneva, sans-serif;
 }
 
 /* Custom page footer */
-footer {
+#footer {
   color: white;
   background: #5CBB1E;
   padding: 16px 20px 5px 20px;
   margin-top: 20px;
   /*border-top: 1px solid #e5e5e5;*/
+  width: 100%;
+  position:absolute;
+  bottom:0;
+  left:0;
 }
 
 
@@ -43,10 +57,28 @@ footer {
 .rounded-well {
   border-radius: 32px;
   background-color: #EAF2EB;
-  padding: 19px;
+  padding: 32px;
   margin-bottom: 20px;
 }
 
 .login-logo {
   width: 50px;
+}
+
+.control-label {
+  font-size: 120%;
+}
+
+
+/* To centralize the tabs */
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs {
+    text-align:center;
 }

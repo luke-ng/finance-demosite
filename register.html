@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.png">
+
+    <title>Cylock Demo - Registration</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/custom-theme.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document"><div id="wrapper">
+    <div class="header">
+      <h3><strong>18 Degrees Lab Cylock Demo</strong></h3>
+    </div>
+    <br>
+    <div class="container text-center" role="main">
+
+      <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul id="myTab" class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#install" aria-controls="install" role="tab" data-toggle="tab">Install App</a></li>
+          <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+          <li role="presentation"><a href="#done" aria-controls="done" role="tab" data-toggle="tab">Done!</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Step 1 -->
+          <div role="tabpanel" class="tab-pane active" id="install">
+            <h2>Download and install Cylock from the app store</h2>
+            <p><a href="#"><img src="img/logo_googleplay.png"/></a></p>
+            <p><a href="#">Click here for QR code to download app</a></p>
+            <div id="qr_body">
+              <img src="img/appurl_qr.png" alt="Google Play URL" />
+            </div>
+            <br><br>
+            <a id="btn_installed_app" href="#" class="btn btn-success btn-lg"><strong>I have installed the app &raquo;</strong></a>
+          </div>
+          <!-- Step 2 -->
+          <div role="tabpanel" class="tab-pane" id="register">
+            <h2>A new tab has been opened in your browser with a QR code</h2>
+            <img src="img/demo_btn_registration.jpg" />
+            <br><br>
+            <a id="btn_registered" href="#" class="btn btn-success btn-lg"><strong>I have scanned the QR code and completed registration on the app &raquo;</strong></a>
+          </div>
+          <!-- Step 3 -->
+          <div role="tabpanel" class="tab-pane" id="done">
+            <h2>A demo account has been created for you. Please use the following credentials for the demo:</h2>
+            <br>
+            <p class="h4">Username: <span class="label label-primary">userXXX</span></p>
+            <p class="h4">Password: <span class="label label-primary">12345</span></p>
+            <br><br>
+            <a href="login.html" class="btn btn-success btn-lg"><strong>Start demo &raquo;</strong></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br><br><br>
+    <div id="footer">
+      <p class="text-right">&copy; 2015 18 Degrees Labs. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+          $('#myTab a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+          });
+
+          $('#btn_installed_app').click(function (e) {
+            e.preventDefault();
+            //TODO: Open the QR registration in new tab
+
+            //Show the next tab
+            $('#myTab a[href="#register"]').tab('show'); // Select tab by name
+          });
+
+          $('#btn_registered').click(function (e) {
+            e.preventDefault();
+            //Show the next tab
+            $('#myTab a[href="#done"]').tab('show'); // Select tab by name
+          });
+
+          $("#qr_body").hide();
+        });
+
+        function showQR() {
+          $("#qr_body").slideDown("slow");
+        }
+    </script>
+  </div></body>
+</html>
